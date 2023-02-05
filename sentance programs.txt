@@ -1,0 +1,153 @@
+#input=the good is madam aba dad mom din cac
+
+#output=the good is aba cac dad madam din mom
+n=input()
+n=n.split()    #import problem
+s=[]
+for i in n:
+    if i==i[::-1]:
+        s.append(i)
+s.sort()
+tp=0
+for k in range(len(n)):
+    if n[k]==n[k][::-1]:
+        n[k]=s[tp]
+        tp+=1
+m=" ".join(n)
+print(m)
+
+
+The given string before reversing the order of paindromic words is =  good bob how are you dod mom
+The given string after reversing the order of paindromic words is =  good mom how are you dod bob
+n=input()
+n=n.split()
+s=[]
+for i in n:
+	if i==i[::-1]:
+		s.append(i)
+s.reverse()                   # don't store it another varible
+tp=0
+for k in range(len(n)):
+	if n[k]==n[k][-1]:
+		n[k]=s[tp]
+		tp+=1
+m=" ".join(n)
+print(m)
+
+input=Good morning This is Btechgeeks
+output=good_morning_this_is_btechgeeks    #snake case output
+
+
+n=input()
+s=""
+for i in n:
+	if i==" ":
+		s+="_"
+	else:
+		s+=i
+print(s)
+
+
+Given string = "hello this is btechgeeks btechgeeks"
+Given word to be replaced = "btechgeeks"
+
+output=hello this is ********** **********
+
+n=input()
+m=input()
+n=n.split()
+s=[]
+for i in n:
+	if i==m:
+		b=len(m)
+		k="*"b
+		s.append(k)
+	else:
+		s.append(i)
+m=" ".join(s)
+print(m)
+
+Given String = "dad and mom both ordered to bring sos in malayalam"
+The count of all the Non-palindromic words in a given sentence = 6
+
+
+
+n=input()
+n=n.split()
+c=0
+for i in n:
+	if i!=i[::-1]:
+		c+=1
+print(c)
+
+Given String = Hello this is btechgeeks
+output:
+olleH siht si skeeghcetb
+
+n=input()
+n=n.split()
+l=[]
+for i in n:
+	l.append(i[::-1])
+m=" ".join(l)
+print(m)
+
+input="Hello this is btechgeeks"
+output=The Longest Word in the above given sentence = btechgeeks
+The length of the longest word = 10
+
+n=input()
+m=[0]
+for i in n:
+	if len(i)>len(m):
+		m=i:
+print("length of highest string is"m "length"len(m)) 
+
+
+Given Sentence =madam how are you
+The total number of palindromic words in the given sentence { madam how are you } are 1
+
+n=input()
+n=n.split()
+c=0
+for i in n:
+	if i==i[::-1]:
+		c+=1
+print(c)
+
+input="hii how are you 32 kumatr"
+output=H.H.A.Y.K
+n=input()
+n=n.split()
+l=[]
+for i in n:
+    if i.isdigit():
+        pass
+    else:
+        m=i[0]
+        l.append(m.upper())
+m=".".join(l)
+print(m)
+
+
+# count the number of vowels in each string
+
+n=input()
+n=n.split()
+c=0
+for i in n:
+    for j in i:
+        if j in "AEIOUaeiou":
+            c+=1
+    print(i,"the number of charsr in this string",c)
+    c=0
+
+
+# remove the last charactes in string
+n=input()
+n=n.split()
+n.pop()
+m=" ".join(n)
+print(m)
+            
+

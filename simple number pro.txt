@@ -1,0 +1,194 @@
+'''Harshad Number:
+
+A Harshad number is one whose original number is divisible by the sum of its digits.
+like 5 , 18 , 156 etc.'''
+'''
+n=int(input())
+p=n
+c=0
+while n>0:
+    x=n%10
+    c=c+x
+    n=n//10
+if p%c==0:
+    print("it is harshad number")
+else:
+    print("not harshad number")
+    
+'''
+'''Disarium Number:
+
+A Disarium number is one in which the sum of each digit raised to the power of its
+respective position equals the original number.'''
+'''Disarium Number:
+    135  89
+'''
+n=int(input())
+s=str(n)
+c=0
+for i in range(len(s)):
+    c=c+int(s[i])*(i+1)
+if c==n:
+    print("disarium number")
+else:
+    print("not that one")
+
+'''
+n=int(input())      #print prime numbers given range 
+for i in range(2,n):
+    for j in range(2,i):
+        if i%j==0:
+            break
+    else:
+        print(i)'''
+
+#to check prime number or not
+'''
+n=int(input())
+for i in range(2,n):
+    if n%i==0:                                 #we have to come out from the loop
+        print("it is not prime number")
+        break
+else:
+    print("it is prime number")'''
+
+
+#it is tech number or not
+n=int(input())
+x=str(n)
+b=len(x)//2
+k=x[:b]
+v=x[b:]
+h=int(k)+int(v)
+l=h*h
+print(l)
+if n==l:
+    print("it is tech number")
+else:
+    print("it is not tech number")
+
+
+The Evil number is another unique positive whole number with an even number of 1s in its binary representation.
+
+example:
+
+1) let n= 12
+
+binary representation = 1100
+
+# It has an even number of 1’s.  Therefore 12 is an evil number.
+
+2) n= 4
+
+binary representation = 100
+
+It has an odd number of 1’s.  Therefore 4 is not an evil number
+
+
+n=int(input())
+k=bin(n)[2:]
+c=0
+for i in k:
+    if i=="1":
+        c+=1
+if c%2==0:
+    print("it evil number")
+else:
+    print("it is not")
+Let the given number =25
+
+The cube of the number = 25*25*25= 15625
+
+The Given number 25 is present at the end.
+
+Therefore, 25 is a Trimorphic Number.
+
+The examples of the first few Trimorphic Numbers are 1, 4, 5, 6, 9, 24, 25, 49, 51, 75, 76, 99, 125, 249, 251, 375, 376, 499, and so on.
+
+Given the number and the task is to check whether the given number is a Trimorphic Number or not.
+
+n=int(input())
+x=str(n)
+s=len(x)
+p=n**s
+k=str(p)
+if x==k[-s:]:
+    print("it is trimorphic number")
+else:
+    print("it is not")
+
+Happy Number :
+
+If the repeating sum of the digits squared equals one, the number is said to be a Happy Number. If we continue this method and get outcome 1, we have a happy number. If the outcome is 4, it enters an infinite loop and is not a happy number. Let’s look at an example to help you grasp it better.
+
+Given Number = 320
+Square of the digits  = 32 + 22 + 02 = 13
+Square of the digits  = 12 + 32 = 10
+Square of the digits  = 12 + 02 = 1
+
+
+
+n=int(input())
+x=n
+while x>=10:
+    su=0
+    while x>0:
+        r=x%10
+        su+=r**2
+        x=x//10
+    x=su
+if x==1:
+    print("it is happy number")
+else:
+    print("it is not happy number")
+
+
+
+Peterson Number:
+
+The Peterson number is the number whose sum of factorials of each digit equals the number itself. Let me give you an example to help you understand:
+
+Examples:
+
+Example1:
+
+Input:
+
+Given number =1
+Output:
+
+The given number [ 1 ] is a Peterson number
+
+
+n=int(input())
+x=n
+su=0
+while n>0:
+    r=n%10
+    fact=1
+    for i in range(1,r+1):
+        fact*=i
+    n=n//10
+    su+=fact
+if su==x:
+    print("it is peterson number")
+else:
+    print("it is not peterson number")
+
+Spy number:
+
+If the sum of a number’s digits equals the product of its digits, it’s called a Spy number. 1124,123,1412,132……
+
+n=int(input())
+x=n
+su=0
+pk=1
+while n>0:
+    r=n%10
+    su+=r
+    pk*=r
+    n=n//10
+if su==pk:
+    print("it is spy number")
+else:
+    print("it is not spy number")

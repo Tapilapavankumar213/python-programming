@@ -1,0 +1,81 @@
+n=input()   #input="pavan3 raj1 kumar2
+n=n.split() #output=raj kumar pavan
+l=[]
+for i in n:
+    s=""
+    for j in i:
+        if j.isdigit():
+            x=j
+            b=int(x)
+        else:
+            s+=j
+    l.insert(b-1,s)
+m=" ".join(l)
+print(m)
+
+
+# to remove first occurences of element in the  string
+'''
+given_str=input()
+match_str=input()
+for i in range(len(given_str)):
+    if given_str[i]==match_str:
+        result_str=given_str[0:i]+given_str[i+1:len(given_str)]
+        break
+print(result_str)
+        
+'''
+# to remove matched string in list
+'''
+given_str=eval(input())
+match_str=input()
+result_str=[]
+for i in given_str:
+    if i==match_str:
+        continue
+    else:
+        result_str.append(i)
+print(result_str)
+'''
+#to print even length of string
+'''
+given_str=eval(input())
+for i in given_str:
+    if len(i)%2==0:
+        print(i)'''
+# to write program to print n no of time given string
+given_str=input()
+given_num=int(input())
+print(given_str*given_num)
+
+
+
+
+'''Given a list, the task is to count the number of pairs in the given list whose product is divisible by k in Python.
+
+Examples:
+
+Example1:
+
+Input:
+
+Given list = [1, 15, 19, 2, 9, 6, 10, 12]
+Given k=3
+given_list=eval(input())
+divi_num=int(input())
+count_num=0
+for i in range(len(given_list)):
+    for j in range(i+1,len(given_list)):
+        if (given_list[i]+given_list[j])% divi_num==0:
+            count_num+=1
+print(count_num)'''
+
+
+'''
+import math
+given_list=eval(input())
+result_list=[]
+for i in given_list:
+    if math.sqrt(i)==math.floor(math.sqrt(i)):	
+        result_list.append(i)
+print(result_list)'''
